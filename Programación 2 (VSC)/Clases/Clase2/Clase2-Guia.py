@@ -165,7 +165,10 @@ def main():
         else:
             os.system("cls")
             print("No seleccionó ningún ejercicio.")
-            DeseaSalir()     
+            DeseaSalir()   
+    else:
+        print("Salí del while") 
+        input() 
     
 if (__name__=="__main__"):{
     main()
