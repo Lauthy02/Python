@@ -9,7 +9,7 @@ import math
 #con import traigo la libreria entera
 #con from traigo una funcion especifica 
 
-salir = 0 
+salir = False 
 
 def DeseaSalir():
     print()
@@ -17,14 +17,15 @@ def DeseaSalir():
     if(letra == "Y" or letra == "y"):
         print("la letra es Y o y")
         input()
-        salir = 1 #No anda la asignación de true a la variable pero al if entra
+        salir = True #No anda la asignación de true a la variable pero al if entra
+        return salir
     else:
-        salir = 0
+        salir = False
+        return salir 
 
 def main():
-    ejerecicio = 0
 
-    while(salir == 0):
+    while(salir == False):
         os.system("cls")
         print("-----------Punto 1-----------")
         print("-----------Punto 2-----------")
@@ -57,7 +58,7 @@ def main():
             Var3 = 10
             Var3 += 1 
             print(f"El valor final es: {Var3}")
-            input()
+            DeseaSalir()
         
         elif(ejerecicio==3):
             # Ingresar cadena por teclado 
