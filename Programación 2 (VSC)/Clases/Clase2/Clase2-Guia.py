@@ -8,7 +8,8 @@ import math
 #import Librerias.Funciones.LimpiaConsola as LC
 #con import traigo la libreria entera
 #con from traigo una funcion especifica 
-salir = False
+
+salir = 0 
 
 def DeseaSalir():
     print()
@@ -16,14 +17,14 @@ def DeseaSalir():
     if(letra == "Y" or letra == "y"):
         print("la letra es Y o y")
         input()
-        salir = True #No anda la asignación de true a la variable pero al if entra
+        salir = 1 #No anda la asignación de true a la variable pero al if entra
     else:
-        salir = False
+        salir = 0
 
 def main():
     ejerecicio = 0
 
-    while(salir == False):
+    while(salir == 0):
         os.system("cls")
         print("-----------Punto 1-----------")
         print("-----------Punto 2-----------")
