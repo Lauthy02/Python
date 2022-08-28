@@ -9,22 +9,18 @@ import math
 #con import traigo la libreria entera
 #con from traigo una funcion especifica 
 
-salir = False 
-
 def DeseaSalir():
     print()
     letra = input("¿Desea salir del programa? (Y/n): ")
     if(letra == "Y" or letra == "y"):
         print("la letra es Y o y")
         input()
-        salir = True #No anda la asignación de true a la variable pero al if entra
-        return salir
+        return True
     else:
-        salir = False
-        return salir 
+        return False 
 
 def main():
-
+    salir = False 
     while(salir == False):
         os.system("cls")
         print("-----------Punto 1-----------")
@@ -49,7 +45,7 @@ def main():
             Var1 = 10
             Var2 = 2
             print(f"Hola, el numero es: {Var1+Var2}")
-            DeseaSalir() #La consola espera a q toque una tecla para finalizar la ejecución
+            salir = DeseaSalir() #La consola espera a q toque una tecla para finalizar la ejecución
         
         elif(ejerecicio==2):
             # Dada una variable entera, sumarle 1 en una línea diferente y mostrar el resultado en pantalla.
