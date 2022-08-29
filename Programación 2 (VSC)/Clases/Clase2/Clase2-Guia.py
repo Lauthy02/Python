@@ -3,6 +3,7 @@ Grupo 2
 '''
 import os #Importa una librería 
 import math
+import datetime
 #import Librerias.Funciones as miFuncion
 #import Librerias.Funciones.SUMAR as S
 #import Librerias.Funciones.LimpiaConsola as LC
@@ -13,8 +14,6 @@ def DeseaSalir():
     print()
     letra = input("¿Desea salir del programa? (Y/n): ")
     if(letra == "Y" or letra == "y"):
-        print("la letra es Y o y")
-        input()
         return True
     else:
         return False 
@@ -45,7 +44,7 @@ def main():
             Var1 = 10
             Var2 = 2
             print(f"Hola, el numero es: {Var1+Var2}")
-            salir = DeseaSalir() #La consola espera a q toque una tecla para finalizar la ejecución
+            salir = DeseaSalir() 
         
         elif(ejerecicio==2):
             # Dada una variable entera, sumarle 1 en una línea diferente y mostrar el resultado en pantalla.
@@ -54,16 +53,16 @@ def main():
             Var3 = 10
             Var3 += 1 
             print(f"El valor final es: {Var3}")
-            DeseaSalir()
+            salir = DeseaSalir() 
         
         elif(ejerecicio==3):
             # Ingresar cadena por teclado 
             os.system("cls")
             print("-----------Punto 3-----------")
             Cadena = input("Ingrese cadena: ")
-            print()
+            print() #La consola espera a q toque una tecla para finalizar la ejecución
             print(f"La cadena q ingresó es: {Cadena}")
-            input()
+            salir = DeseaSalir()
         
         elif(ejerecicio==4):
             # Ingresar valor por teclado y mostrar el 25%
@@ -71,7 +70,7 @@ def main():
             print("-----------Punto 4-----------")
             Var4 = input("Ingrese el valor: ")
             print(f"El 25% de {Var4} es: {float(Var4)*0.25} ")
-            input()
+            salir = DeseaSalir() 
         
         elif(ejerecicio==5):
             # Ingresar int en una variable temperatura y localidad y mostar
@@ -80,7 +79,7 @@ def main():
             Temp = int(input("Ingrese la temperatura: "))
             Localidad = input("Ingrese la localidad: ")
             print("En la zona de %s tenemos una temperatura de %d" %(Localidad,Temp))
-            input()
+            salir = DeseaSalir() 
         
         elif(ejerecicio==6):
             # Dados los lados de un cuadrado, mostrar en pantalla el valor de su superficie
@@ -90,7 +89,7 @@ def main():
             altura = int(input("Ingrese el valor de la altura del cuadrado: "))
             superficie = base*altura
             input(f"La superficie del cuadrado es: {superficie}")
-            input()
+            salir = DeseaSalir() 
 
         elif(ejerecicio==7):
             # Copiar y ejecutar el siguiente código, justifique la salida que se obtiene por pantalla
@@ -112,10 +111,10 @@ def main():
             print("Los números siguen una secuencia de condiciones para q la salida sea correcta.")
             print("Primero entra en un if preguntando si N1 es mayor a N2, si si N1 es mayor, si no,")
             print("pregunta si N2 es mayor a N1, si si N2 es mayo pero si no, son iguales")
-            input()
+            salir = DeseaSalir() 
 
         elif(ejerecicio==8):
-            #Implementar un algoritmo en Python que, dados dos valores de las acciones de 
+            # Implementar un algoritmo en Python que, dados dos valores de las acciones de 
             # la empresa Techint del día 23-8-2022 y otra del día 22-8-2022 permita informar 
             # si las acciones están el alza.
             # ingresar valores para las distintas fechas.
@@ -133,12 +132,34 @@ def main():
                     print(f"{numero2} es mayor a {numero1}, por lo tanto, aumentó el valor") 
                 else: 
                     print(f"{numero2} es igual  a {numero1}, por lo tanto, el valor se mantuvo") 
-            input()
+            salir = DeseaSalir() 
         
         elif(ejerecicio==9):
+            # Tomando el mismo caso del ejercicio anterior, cambiar el código para ingresar por 
+            # teclado el valor de dos acciones de días distintos. Tomando dicha información informar 
+            # si conviene comprar, vender o no reacciona. 
             os.system("cls")
             print("-----------Punto 9-----------")
-            input()
+            i=1
+            while(i==1):
+                dia1 = int(input(f"ingrese el día de la fecha 1: "))
+                mes1 = int(input(f"ingrese el mes de la fecha 1: "))
+                anio1 = int(input(f"ingrese el año de la fecha 1: "))
+                dia2 = int(input(f"ingrese el día de la fecha 2: "))
+                mes2 = int(input(f"ingrese el mes de la fecha 2: "))
+                anio2 = int(input(f"ingrese el año de la fecha 2: "))
+                i = i + 1
+
+            fecha1 = datetime.date(anio1,mes1,dia1)
+            fecha2 = datetime.date(anio2,mes2,dia2)
+
+            valorAcc1 = int(input(f"Ingrese el valor de las acciones en la fecha {fecha1}: "))
+            ValorAcc2 = int(input(f"Ingrese el valor de las acciones en la fecha {fecha2}: "))
+
+            if(fecha1<fecha2):
+                pass
+
+            salir = DeseaSalir() 
         
         elif(ejerecicio==10):
             os.system("cls")

@@ -82,7 +82,7 @@ Básico del lenguaje a conocer para relacionar todos los lenguajes q vimos
                 for i in 'range' : #Me recorre el string
                     print(i)
                 ----------------------
-                for i in range (5,2,-1): #inicio,final, orientación
+                for i in range (5,2,-1): #inicio, final, orientación
                     print(i)
                 ----------------------
         while 
