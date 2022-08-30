@@ -158,13 +158,20 @@ def main():
 
             if(fecha1 > fecha2):
                 print(f"La fecha mas grande es {fecha1}")
+                if(valorAcc1>valorAcc2):
+                    print("El valor de las acciones aumentó, conviene vender")
+                else: 
+                    print("El valor de las acciones cayó, conviene comprar")
             else:
                 if(fecha2 > fecha1):
                     print(f"La fecha mas grande es {fecha2}")
+                    if(valorAcc2>valorAcc1):
+                        print("El valor de las acciones aumentó, conviene vender")
+                    else: 
+                        print("El valor de las acciones cayó, conviene comprar")
                 else:
                     print(f"la fecha {fecha1} y la fecha {fecha2} son iguales")
                     print("No reaccionar")
-            #falta resolver lo de los valores 
             salir = DeseaSalir() 
         
         elif(ejerecicio==10):
@@ -178,7 +185,7 @@ def main():
                 print("La persona está dentro del largo de edad")
             else:
                 print()("La persona está fuera del largo de edad")
-            DeseaSalir() 
+            salir = DeseaSalir() 
         
         elif(ejerecicio==11):
             # Un estudio contable, necesita automatizar un proceso de gran importancia. Se debe discriminar los 
@@ -190,24 +197,38 @@ def main():
             importe = int(input("Ingrese el importe del cheque: "))
             if(importe > 100000):
                 print(f"El importe del cheque es de {importe}, por lo tanto es superior a 100000ARS")
-            DeseaSalir() 
+            salir = DeseaSalir() 
             
         elif(ejerecicio==12):
             # Crear un programa que dado un valor entero que se ingresa por teclado, informe si el 40% 
             # del valor ingresado se encuentra dentro del rango de 10 y 42.
             os.system("cls")
             print("-----------Punto 12-----------")
-            DeseaSalir() 
+            valor = int(input("Ingrese el valor numérico: "))
+            res = valor * 0.40
+            if(res>=10 and res<=40):
+                print(f"El porcentaje se encuentra dentro del rango, es: {res}")
+            else:
+                print("El porcentaje no se encuentra dentro del rango")
+            salir = DeseaSalir() 
 
         elif(ejerecicio==13):
             os.system("cls")
             print("-----------Punto 13-----------")
-            DeseaSalir() 
-
+            PIB2020 = (21 * 20 + 10 * 10)
+            PIB2021 = (20 * 22 +  9 * 12)
+            PIB2022 = (22 * 21 + 10 * 11)
+            if(PIB2020 > PIB2021 and PBI2020 > PIB2022): 
+                print(f"El año con mayor PBI es el 2020 con un valor de: {PIB2020}") 
+            elif(PIB2021 > PIB2020 and PIB2021 > PIB2022):
+                print(f"El año con mayor PBI es el 2021 con un valor de: {PIB2021}") 
+            elif(PIB2022 > PIB2021 and PIB2022 > PIB2020):
+                print(f"El año con mayor PBI es el 2022 con un valor de: {PIB2022}") 
+            salir = DeseaSalir() 
         else:
             os.system("cls")
             print("No seleccionó ningún ejercicio.")
-            DeseaSalir()   
+            salir = DeseaSalir()   
     else:
         print("Salí del while") 
         input() 
