@@ -70,7 +70,7 @@ Básico del lenguaje a conocer para relacionar todos los lenguajes q vimos
                     else:
                         print("aaaaa")
                 ----------------------
-        switch: no existe en python 
+        switch-case: no existe en python 
     
    -Repetición
         for 

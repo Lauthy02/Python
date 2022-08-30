@@ -156,22 +156,45 @@ def main():
             valorAcc1 = int(input(f"Ingrese el valor de las acciones en la fecha {fecha1}: "))
             ValorAcc2 = int(input(f"Ingrese el valor de las acciones en la fecha {fecha2}: "))
 
-            if(fecha1<fecha2):
-                pass
-
+            if(fecha1 > fecha2):
+                print(f"La fecha mas grande es {fecha1}")
+            else:
+                if(fecha2 > fecha1):
+                    print(f"La fecha mas grande es {fecha2}")
+                else:
+                    print(f"la fecha {fecha1} y la fecha {fecha2} son iguales")
+                    print("No reaccionar")
+            #falta resolver lo de los valores 
             salir = DeseaSalir() 
         
         elif(ejerecicio==10):
+            # Nos contratan para hacer una segmentación de mercados, el equipo decidó usar Python para implementar
+            # una solución. El relevamiento del problema describe que al tener el dato de la edad de una persona 
+            # debe informar si se encuentra entre los 18 y los 36 años. 
             os.system("cls")
             print("-----------Punto 10-----------")
+            edad = int(input("Ingrese la edad de la persona: "))
+            if(edad>= 18 and edad<=36):
+                print("La persona está dentro del largo de edad")
+            else:
+                print()("La persona está fuera del largo de edad")
             DeseaSalir() 
         
         elif(ejerecicio==11):
+            # Un estudio contable, necesita automatizar un proceso de gran importancia. Se debe discriminar los 
+            # cheques que tiene tienen un importe superior a los 100.000 pesos. Para ello, debemos realizar 
+            # un programa que me permita ingresar el importe del cheque. Al terminar la carga, el sistema 
+            # debe informar si el importe es mayor a 100.000 
             os.system("cls")
             print("-----------Punto 11-----------")
+            importe = int(input("Ingrese el importe del cheque: "))
+            if(importe > 100000):
+                print(f"El importe del cheque es de {importe}, por lo tanto es superior a 100000ARS")
             DeseaSalir() 
             
         elif(ejerecicio==12):
+            # Crear un programa que dado un valor entero que se ingresa por teclado, informe si el 40% 
+            # del valor ingresado se encuentra dentro del rango de 10 y 42.
             os.system("cls")
             print("-----------Punto 12-----------")
             DeseaSalir() 
