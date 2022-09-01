@@ -26,8 +26,21 @@ def main():
     for i in range(5,0,-1): #(indico el inicio de la colección, final de la colección, y el sentido)
         print(i)
 
-
-
+    print("While contador")
+    contador = 1 
+    while(contador<10):
+        print(contador)
+        contador += 1
+    
+    print("While con banderas")
+    salir = False 
+    while(not salir):
+        print(contador)
+        a = input("ingrese un valor: ")
+        if(a == "0"):
+            salir = True
+        else: 
+            contador += 1
 
 
 if __name__=="__main__":
