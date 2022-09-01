@@ -21,7 +21,6 @@ def main():
     2- Crear un programar que muestre sólo los números pares entre el 0 y el 10
     '''
     print("Punto 2 - propuesta 2")
-    import os 
     os.system("cls") 
     for i in range(0,11): 
         if i/2==int(i/2): 
@@ -31,7 +30,6 @@ def main():
     3- Crear  un  programa,  que  permita  mostrar  números  enteros  distintos  de  cero,  
     al ingresar cero el programa termina y muestra un mensaje de fin
     '''
-    import os 
     os.system("cls") 
     valor=int(input("Ingresar un valor, o cero para terminar : ")) 
     
