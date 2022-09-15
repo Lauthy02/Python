@@ -3,6 +3,7 @@ Permita llenar una tupla de python con valores enteros impares entre 0 y 1000. L
 
 La tupla no es dinámica, no puedo tener una funcion q le pase cosas a la tupla. pero si puedo tener una lista y la lista la paso a tupla
 '''
+import datetime
 
 def main():
     Q,R
@@ -15,9 +16,7 @@ def main():
 if __name__=="__main__":
     main()
 
-
-import datetime
-
+'''
 i=1
 
 while(i==1):
@@ -34,3 +33,4 @@ fecha1 = datetime.date(anio1,mes1,dia1)
 fecha2 = datetime.date(anio2,mes2,dia2)
 
 print(fecha1)
+'''
