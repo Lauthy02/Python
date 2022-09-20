@@ -10,7 +10,6 @@ def main():
     K=1   
     Q=K/2
     R=K-(Q*2)
-    if(R==0):
 
 
 if __name__=="__main__":

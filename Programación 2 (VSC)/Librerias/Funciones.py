@@ -1,7 +1,8 @@
 import os
-
-def SUMAR(a,b):
-    return a+b
+import math
+import random
+from multipledispatch import dispatch
 
 def LimpiaConsola():
     os.system("cls")
+
