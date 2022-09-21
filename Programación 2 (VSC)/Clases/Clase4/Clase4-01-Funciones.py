@@ -1,8 +1,4 @@
-'''
-Autor:
-Fecha:
-Descripcion:
-'''
+
 #Como importar funciones de otra librería 
 import Librerias.Funciones
 #También se puede escribir de la siguiente manera
