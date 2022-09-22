@@ -14,7 +14,7 @@ def DiferenciaPorcentual(NroNuevo,NroViejo):
 
 def main():
     os.system("cls")
-    TuplaPrecios = (30,20,10,20,25,50,40)
+    TuplaPrecios = (10,20,10,20,25,50,30)
     LargoDeTupla = (len(TuplaPrecios)-1)
 
     print(type(LargoDeTupla))
@@ -32,6 +32,8 @@ def main():
         print("La diferencia porcentual es: %0.2f" %(DifPor2))
     else:
         print("El precio se mantuvo")
+        print(f"La diferencia porcentual es: {DiferenciaPorcentual(TuplaPrecios[LargoDeTupla],TuplaPrecios[0])}")
+    
     print(f"El precio máximo del producto --PILUSOS DE BOKITA-- fué de: {max(TuplaPrecios)}")
     input()
     
