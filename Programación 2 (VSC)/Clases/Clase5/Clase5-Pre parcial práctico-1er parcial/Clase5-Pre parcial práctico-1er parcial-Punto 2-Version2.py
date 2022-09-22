@@ -7,7 +7,6 @@ b. 2- La diferencia del último precio con el primero expresado en porcentaje
 c. 3- El nombre del producto y el precio más alto en ese mes 
 '''
 import os
-import Librerias.Funciones as Lib
 
 def DiferenciaPorcentual(NroNuevo,NroViejo):
     DifPor = (((NroNuevo/NroViejo)*100)-100)
@@ -15,9 +14,7 @@ def DiferenciaPorcentual(NroNuevo,NroViejo):
 
 def main():
 
-    Lib.LimpiaConsola()
     ListaDePrecios = []
-    #os.system("cls")
     NombreProd = input("Ingrese el nombre del producto: ")
     CantVentas = int(input(f"Ingrese la cantidad de ventas en el mes del producto {NombreProd}: "))
     
