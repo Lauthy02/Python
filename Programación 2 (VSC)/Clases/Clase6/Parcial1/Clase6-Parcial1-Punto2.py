@@ -58,6 +58,7 @@ def main():
                 print("El precio está en baja")
             else:
                 print("El precio se mantuvo")
+                
             print(f"El primer valor de la tupla es: {TuplaValores[0]}")
             print(f"El ultimo valor de la tupla es: {TuplaValores[LargoTupla]}")
             print("La diferencia en porcentaje es: %0.2f" %(DiferenciaPorcentual(TuplaValores[LargoTupla], TuplaValores[0])))
