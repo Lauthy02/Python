@@ -71,17 +71,15 @@ class Cuenta:
     def ingresarDinero(self, importe):
         self._saldo += importe
 
-    '''
-    def esTitularValido(edad):
+    def esTitularValido(self, edad):
         Ok = False
         if(edad > 18 and edad < 25):
             Ok = True
         return Ok
-    '''
 
     def mostrar(self):
-        print(f"El titular es: {titular}")
-        print(f"El saldo es: {saldo}")
+        print(f"El titular es: {self.titular}")
+        print(f"El saldo es: {self.saldo}")
 
 class CuentaJoven(Cuenta):
     #Atributos
@@ -99,14 +97,17 @@ class CuentaJoven(Cuenta):
     Bonificacion = property(getBonific, setBonific)
 
     #Métodos
-    def retirarDinero(self, importe):
-        if():
+    def retirarDinero(self, importe, edad):
+        if(super().esTitularValido(edad)):
             super().retirarDinero(importe)
-    
-    def ingresarDinero(self, importe):
-        if():
+        else:
+            print("ADVERTENCIA: No puede retirar dinero")
+    def ingresarDinero(self, importe, edad):
+        if(super().esTitularValido(edad)):
             super().ingresarDinero(importe)
+        else:
+            print("ADVERTENCIA: No puede ingresar dinero")
 
     def mostrar(self):
-        print(f"Esta es la Cuenta Joven con una bonificación de: {Bonificacion}")
+        print(f"Esta es la Cuenta Joven con una bonificación de: {self.Bonificacion}")
         super().mostrar()
