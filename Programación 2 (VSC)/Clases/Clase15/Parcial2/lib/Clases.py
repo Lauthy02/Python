@@ -99,11 +99,13 @@ class CuentaJoven(Cuenta):
     #Métodos
     def retirarDinero(self, importe, edad):
         if(super().esTitularValido(edad)):
+            print("AVISO: Operacion realizada con exito")
             super().retirarDinero(importe)
         else:
             print("ADVERTENCIA: No puede retirar dinero")
     def ingresarDinero(self, importe, edad):
         if(super().esTitularValido(edad)):
+            print("AVISO: Operacion realizada con exito")
             super().ingresarDinero(importe)
         else:
             print("ADVERTENCIA: No puede ingresar dinero")

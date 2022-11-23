@@ -80,7 +80,7 @@ def main():
     Cliente4.ctajoven = CtaJoven4
 
     CtaJoven4.titular = Cliente4.nomb
-    CtaJoven4.saldo = 700
+    CtaJoven4.saldo = 900
     CtaJoven4.Bonificacion = 10
 
     CtaJoven4.mostrar()
