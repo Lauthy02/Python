@@ -11,7 +11,10 @@ que estará expresada en tanto por ciento. Construye los siguientes métodos par
     5.  El método mostrar() debe devolver el mensaje de “Cuenta Joven” y la bonificación de la cuenta.  
     6.  Piensa los métodos heredados de la clase madre que hay que reescribir
 
-Nota: "la cantidad" doy por entendido que es el saldo de la cuenta
+Notas: 
+    1. Entiendo "cantidad" como saldo de la cuenta
+    2. Entiendo "bonificación" al descuento que se le aplica al mantenimiento de la cuenta
+        El costo del mantenimiento de la cuenta es un monto fijo
 '''
 class Cliente:
     #Atributos
@@ -46,24 +49,25 @@ class Cuenta:
     #Atributos
     _titular = None    
     _saldo = None
+    _cost_manten = None
 
     #Constructor
     def __init__(self):
-        pass
+        self._cost_manten = 12000
 
     #getters y setters
+    def get_titular(self):
+        return self._titular
+    def set_titular(self, value):
+        self._titular = value
+    titular = property(get_titular,set_titular)
+
     def get_saldo(self):
         return self._saldo
     def set_saldo(self, value):
         self._saldo = value
     saldo = property(get_saldo,set_saldo)
 
-    def get_titular(self):
-        return self._titular
-    def set_titular(self, value):
-        self._titular = value
-    titular = property(get_titular,set_titular)
-    
     #Métodos
     def retirarDinero(self, importe):
         self._saldo -= importe
@@ -79,7 +83,8 @@ class Cuenta:
 
     def mostrar(self):
         print(f"El titular es: {self.titular}")
-        print(f"El saldo es: {self.saldo}")
+        print(f"El saldo es: {self.saldo} ARS")
+        print(f"El mantenimiento de la cuenta es de: {self._cost_manten} ARS")
 
 class CuentaJoven(Cuenta):
     #Atributos
@@ -103,13 +108,17 @@ class CuentaJoven(Cuenta):
             super().retirarDinero(importe)
         else:
             print("ADVERTENCIA: No puede retirar dinero")
+
     def ingresarDinero(self, importe, edad):
         if(super().esTitularValido(edad)):
             print("AVISO: Operacion realizada con exito")
             super().ingresarDinero(importe)
         else:
             print("ADVERTENCIA: No puede ingresar dinero")
+    
+    def aplicarBonific(self, bon):
+        self._cost_manten -= self._cost_manten * 0.1
 
     def mostrar(self):
-        print(f"Esta es la Cuenta Joven con una bonificación de: {self.Bonificacion}")
+        print(f"Esta es la Cuenta Joven con una bonificación de: {self.Bonificacion} porciento")
         super().mostrar()

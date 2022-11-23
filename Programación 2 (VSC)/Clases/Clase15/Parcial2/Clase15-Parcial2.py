@@ -37,7 +37,7 @@ def main():
 
     CtaJoven2.titular = Cliente2.nomb
     CtaJoven2.saldo = 700
-    CtaJoven2.Bonificacion = 10
+    CtaJoven2.Bonificacion = 20
 
     CtaJoven2.mostrar()
 
@@ -59,7 +59,7 @@ def main():
 
     CtaJoven3.titular = Cliente3.nomb
     CtaJoven3.saldo = 700
-    CtaJoven3.Bonificacion = 10
+    CtaJoven3.Bonificacion = 30
 
     CtaJoven3.mostrar()
 
@@ -81,7 +81,7 @@ def main():
 
     CtaJoven4.titular = Cliente4.nomb
     CtaJoven4.saldo = 900
-    CtaJoven4.Bonificacion = 10
+    CtaJoven4.Bonificacion = 40
 
     CtaJoven4.mostrar()
 
