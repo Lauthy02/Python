@@ -1,3 +1,27 @@
+'''
+---- 2do Parcial de Programación 2 (Python) ----
+Alumno: Rojas Lautaro
+Fecha: 23/11/2022
+Tema 1
+Localizacón: Centro (San Juan)
+
+Vamos a definir ahora una “Cuenta Joven”, para ello vamos a crear una nueva clase CuantaJoven que deriva de 
+la anterior. Cuando se crea esta nueva clase, además del titular y la cantidad se debe guardar una bonificación 
+que estará expresada en tanto por ciento. Construye los siguientes métodos para la clase  
+    1.  Un constructor.  
+    2.  Los setters y getters para el nuevo atributo.  
+    3.  En esta ocasión los titulares de este tipo de cuenta tienen que ser mayor de edad., por lo tanto hay que 
+    crear un método esTitularValido() que devuelve verdadero si el titular es mayor de edad pero menor de 
+    25 años y falso encaso contrario.  
+    4.  Además, la retirada de dinero sólo se podrá hacer si el titular es válido.  
+    5.  El método mostrar() debe devolver el mensaje de “Cuenta Joven” y la bonificación de la cuenta.  
+    6.  Piensa los métodos heredados de la clase madre que hay que reescribir
+
+Notas: 
+    1. Entiendo "cantidad" como saldo de la cuenta
+    2. Entiendo "bonificación" al descuento que se le aplica al mantenimiento de la cuenta
+        El costo del mantenimiento de la cuenta es un monto fijo
+'''
 import os
 import lib.Clases as clas
 
@@ -22,6 +46,7 @@ def main():
     print("-- Operaciones --")
     CtaJoven1.ingresarDinero(500,Cliente1.edad)
     CtaJoven1.retirarDinero(9000,Cliente1.edad)
+    CtaJoven1.aplicarBonific(CtaJoven1.Bonificacion,Cliente1.edad)
     print("----")
     
     CtaJoven1.mostrar()
@@ -44,6 +69,7 @@ def main():
     print("-- Operaciones --")
     CtaJoven2.ingresarDinero(500,Cliente2.edad)
     CtaJoven2.retirarDinero(9000,Cliente2.edad)
+    CtaJoven2.aplicarBonific(CtaJoven2.Bonificacion,Cliente2.edad)
     print("----")
 
     CtaJoven2.mostrar()
@@ -66,6 +92,7 @@ def main():
     print("-- Operaciones --")
     CtaJoven3.ingresarDinero(500,Cliente3.edad)
     CtaJoven3.retirarDinero(9000,Cliente3.edad)
+    CtaJoven3.aplicarBonific(CtaJoven3.Bonificacion,Cliente3.edad)
     print("----")
 
     CtaJoven3.mostrar()
@@ -88,6 +115,7 @@ def main():
     print("-- Operaciones --")
     CtaJoven4.ingresarDinero(500,Cliente4.edad)
     CtaJoven4.retirarDinero(9000,Cliente4.edad)
+    CtaJoven4.aplicarBonific(CtaJoven4.Bonificacion,Cliente4.edad)
     print("----")
 
     CtaJoven4.mostrar()

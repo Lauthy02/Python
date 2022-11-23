@@ -1,4 +1,10 @@
 '''
+---- 2do Parcial de Programación 2 (Python) ----
+Alumno: Rojas Lautaro
+Fecha: 23/11/2022
+Tema 1
+Localizacón: Centro (San Juan)
+
 Vamos a definir ahora una “Cuenta Joven”, para ello vamos a crear una nueva clase CuantaJoven que deriva de 
 la anterior. Cuando se crea esta nueva clase, además del titular y la cantidad se debe guardar una bonificación 
 que estará expresada en tanto por ciento. Construye los siguientes métodos para la clase  
@@ -21,10 +27,6 @@ class Cliente:
     _nombre = None
     _edad = None
     _CJ = None
-
-    #Constructor
-    def __init__(self):
-        pass
 
     #Getters y setters
     def get_nombre(self):
@@ -89,11 +91,7 @@ class Cuenta:
 class CuentaJoven(Cuenta):
     #Atributos
     _bonific = None
-
-    #Constructor
-    def __init__(self):
-        pass
-
+    
     #Getter y setter
     def getBonific(self):
         return self._bonific
@@ -104,21 +102,26 @@ class CuentaJoven(Cuenta):
     #Métodos
     def retirarDinero(self, importe, edad):
         if(super().esTitularValido(edad)):
-            print("AVISO: Operacion realizada con exito")
+            print("AVISO: Operacion retirar dinero realizada con exito")
             super().retirarDinero(importe)
         else:
             print("ADVERTENCIA: No puede retirar dinero")
 
     def ingresarDinero(self, importe, edad):
         if(super().esTitularValido(edad)):
-            print("AVISO: Operacion realizada con exito")
+            print("AVISO: Operacion ingresar dinero realizada con exito")
             super().ingresarDinero(importe)
         else:
             print("ADVERTENCIA: No puede ingresar dinero")
     
-    def aplicarBonific(self, bon):
-        self._cost_manten -= self._cost_manten * 0.1
-
+    def aplicarBonific(self, bon, edad):
+        if(super().esTitularValido(edad)):
+            print("AVISO: Operacion aplicar bonificacion realizada con exito")
+            aux = bon/100
+            self._cost_manten -= self._cost_manten * aux
+        else:
+            print("ADVERTENCIA: No se puede aplicar bonificacion")
+        
     def mostrar(self):
         print(f"Esta es la Cuenta Joven con una bonificación de: {self.Bonificacion} porciento")
         super().mostrar()
