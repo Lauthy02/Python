@@ -10,20 +10,78 @@ que estará expresada en tanto por ciento. Construye los siguientes métodos par
     4.  Además, la retirada de dinero sólo se podrá hacer si el titular es válido.  
     5.  El método mostrar() debe devolver el mensaje de “Cuenta Joven” y la bonificación de la cuenta.  
     6.  Piensa los métodos heredados de la clase madre que hay que reescribir
+
+Nota: "la cantidad" doy por entendido que es el saldo de la cuenta
 '''
+class Cliente:
+    #Atributos
+    _nombre = None
+    _edad = None
+    _CJ = None
+
+    #Constructor
+    def __init__(self):
+        pass
+
+    #Getters y setters
+    def get_nombre(self):
+        return self._nombre
+    def set_nombre(self, value):
+        self._nombre = value
+    nomb = property(get_nombre,set_nombre)
+
+    def get_edad(self):
+        return self._edad
+    def set_edad(self, value):
+        self._edad = value
+    edad = property(get_edad,set_edad)
+
+    def getCJ(self):
+        return self._CJ
+    def setCJ(self, value):
+        self._CJ = value
+    ctajoven = property(getCJ,setCJ)
+
 class Cuenta:
-    _titular = None
-    _cantidad = None
+    #Atributos
+    _titular = None    
+    _saldo = None
 
-    def esTitularValido():
+    #Constructor
+    def __init__(self):
         pass
 
-    def retirarDinero():
-        pass
+    #getters y setters
+    def get_saldo(self):
+        return self._saldo
+    def set_saldo(self, value):
+        self._saldo = value
+    saldo = property(get_saldo,set_saldo)
 
-    def mostrar():
-        pass
+    def get_titular(self):
+        return self._titular
+    def set_titular(self, value):
+        self._titular = value
+    titular = property(get_titular,set_titular)
+    
+    #Métodos
+    def retirarDinero(self, importe):
+        self._saldo -= importe
 
+    def ingresarDinero(self, importe):
+        self._saldo += importe
+
+    '''
+    def esTitularValido(edad):
+        Ok = False
+        if(edad > 18 and edad < 25):
+            Ok = True
+        return Ok
+    '''
+
+    def mostrar(self):
+        print(f"El titular es: {titular}")
+        print(f"El saldo es: {saldo}")
 
 class CuentaJoven(Cuenta):
     #Atributos
@@ -36,17 +94,19 @@ class CuentaJoven(Cuenta):
     #Getter y setter
     def getBonific(self):
         return self._bonific
-
     def setBonific(self, value):
         self._bonific = value
     Bonificacion = property(getBonific, setBonific)
 
     #Métodos
-    def esTitularValido():
-        pass
+    def retirarDinero(self, importe):
+        if():
+            super().retirarDinero(importe)
+    
+    def ingresarDinero(self, importe):
+        if():
+            super().ingresarDinero(importe)
 
-    def retirarDinero():
-        pass
-
-    def mostrar():
-        pass
+    def mostrar(self):
+        print(f"Esta es la Cuenta Joven con una bonificación de: {Bonificacion}")
+        super().mostrar()
