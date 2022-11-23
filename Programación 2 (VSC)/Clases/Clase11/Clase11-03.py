@@ -8,6 +8,8 @@ df = pd.DataFrame(dicc)
 serie = pd.Series(df['genero'].value_counts())
 df = pd.DataFrame(serie)
 
-mp.pie(df['genero'], labels=df.index, autopct='%0.1f%%')
+'''
+mp.pie(df['genero'], labels=df.index,autopct='%0.1f%%')
 mp.title('cantidad por genero')
 mp.show()
+'''
