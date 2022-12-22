@@ -24,6 +24,17 @@ import os
 import math
 import random as rnd
 
+class Cuenta():
+    _Nombre = None 
+    _Apellido = None
+    _Edad = None
+
+    def get_nombre(self):
+        return self._Nombre
+    def set_nombre(self,value):
+        self._Nombre = value
+    nombre = property(get_nombre,set_nombre)
+
 def main():
     Ejercicio = 1
     os.system("cls")
@@ -101,6 +112,11 @@ def main():
             print("Valor no valido. :-(")
             input()
             os.system("cls")
+    print("Salí del while")
+
+    Cliente = Cuenta()
+    Cliente.nombre = "Mati"
+    print(Cliente.nombre)
 
 if(__name__=="__main__"):
     main()
